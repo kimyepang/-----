@@ -7,7 +7,10 @@
   <title>CNUH</title>
 <link rel="stylesheet" href="css/aos.css">
 <link rel="stylesheet" href="css/css.css">
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
 </head>
 <body>
   
@@ -267,10 +270,11 @@
                       </ul>
                   </li>
                   <li>
-                    <a href="#">행복지기</a>
-                  </li>
-                  <li>
-                    <a href="#">홍보동영상</a>
+                    <a href="#">관련매체</a>
+                    <ul class="sublist">
+                      <li><a href="#">행복지기</a></li>
+                      <li><a href="#">홍보동영상</a></li>
+                    </ul>
                   </li>
                   <li>
                     <a href="#">서비스현장</a>
@@ -286,10 +290,11 @@
                     <a href="#">공공보건의료</a>
                   </li>
                   <li>
-                    <a href="#">발전후원회</a>
-                  </li>
-                  <li>
-                    <a href="#">협력기관</a>
+                    <a href="#">관련기관</a>
+                    <ul class="sublist">
+                      <li><a href="#">발전후원회</a></li>
+                      <li><a href="#">협력기관</a></li>
+                    </ul>
                   </li>
                   <li>
                     <a href="#">개원52주년 웹역사관</a>
@@ -330,19 +335,121 @@
   </li>
 </ul>
 </div>
-
-
-
-  
-    
-
-
 </section>
 
 
+<section id="second">
 
+<div class="secondwrap">
 
-  <script src="js/aos.js"></script>
-  <script src="js/js.js"></script>
+  <div class="sqwrap">
+
+    <div class="slide">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="images/slide_mini01.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="images/slide_mini02.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="images/slide_mini03.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="images/slide_mini04.png" alt=""></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+    <div class="quick">
+
+      <div class="quicksrc">
+        <h2><span><img src="images/icon.png" alt="icon"></span> 진료과/의료진 검색</h2>
+        <input type="search">
+      </div>
+
+      <ul class="quickmenu">
+        <li>
+          <a href="#">
+            <p><img src="images/quickmenu_1.png" alt="quick1"></p>
+            <p>진료과전체보기</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p><img src="images/quickmenu_2.png" alt="quick2"></p>
+            <p>오시는길/주차안내</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p><img src="images/quickmenu_3.png" alt="quick3"></p>
+            <p>장례식장</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p><img src="images/quickmenu_4.png" alt="quick4"></p>
+            <p>채용공고</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p><img src="images/quickmenu_5.png" alt="quick5"></p>
+            <p>종합검진</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p><img src="images/quickmenu_6.png" alt="quick6"></p>
+            <p>전문센터</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p><img src="images/quickmenu_7.png" alt="quick7"></p>
+            <p>발전후원회</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p><img src="images/quickmenu_8.png" alt="quick8"></p>
+            <p>청렴위반신고</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="notice">
+    <h1><span><img src="images/icon.png" alt="icon"></span> 공지사항</h1>
+    <ul class="noticelist">
+      <li>
+        <a href="#">
+          <p class="title">추석 청렴 서한문</p>
+          <p class="date">2024-09-10</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p class="title">2024년 공공기관 종합청렴도 평가 관련 개인정보 제3자 제공사항 알림</p>
+          <p class="date">2024-07-15</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p class="title">충남대학교병원 모바일 앱 안내</p>
+          <p class="date">2024-07-08</p>
+        </a>
+      </li>
+
+    </ul>
+  </div>
+
+</div>
+
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/js.js"></script>
+
 </body>
 </html>
