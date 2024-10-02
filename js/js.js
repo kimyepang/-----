@@ -1,8 +1,6 @@
 $(function(){
 
 $(".gnb>li").mouseenter(function(){
-  let i = $(this).index();
-  console.log(i);
   $(".gnb>li>a").addClass("on");
   $(".topwrap").addClass("on");
   $(".subbg").addClass("on");
@@ -22,9 +20,7 @@ $(".top").mouseleave(function(){
   $(".right .login a").removeClass("on");
   $(".src>a>img").attr("src", "images/icon_search_white.png");
 });
-
 });
-
 
 var swiper = new Swiper(".mySwiper", {
   loop:true,
@@ -40,6 +36,30 @@ var swiper = new Swiper(".mySwiper", {
     delay: 3000,
     disableOnInteraction: false,
   },
+});
+
+$(".hdmenu .menu").click(function(){
+  $(".menu").hide();
+  $(".close").show();
+  $(".hdgnbwrap").show();
+  $(".topwrap").addClass("on");
+  $(".toplogo>img").attr("src", "images/logo_on.png")});
+
+$(".hdmenu .close").click(function(){
+  $(".menu").show();
+  $(".close").hide();
+  $(".hdgnbwrap").hide();
+  $(".topwrap").removeClass("on");
+  $(".toplogo>img").attr("src", "images/logo_white.png");
+});
+
+$(".close").hover(function(){
+  $(this).addClass("on");
+});
+
+$(".hdgnb .right>ul>li").click(function(){
+  $(this).find(".submenu").toggle();
+
 });
 
 
