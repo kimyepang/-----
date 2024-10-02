@@ -22,13 +22,13 @@ a{text-decoration: none; color: #3873AB; letter-spacing: -0.5px; font-family: 'P
 p{color: #3873AB; letter-spacing: -0.5px; font-family: 'Pretendard Variable';}
 
 #main{width: 100%; height: 100vh;}
-#main .mainimg{width: 100%; height: 100vh; position: absolute; left: 0; top: 0; z-index: -2; filter: brightness(0.9) contrast(0.8);}
+#main .mainimg{width: 100%; height: 100%; position: absolute; left: 0; top: 0; z-index: -2; filter: brightness(0.9) contrast(0.8);}
 #main .mainimg img{width: 100%; height: 100%; object-fit: cover;}
 #main .topwrap{width: 100%; height: 90px;}
 #main .topwrap.on{background-color: #fff;}
 #main .top{display: flex; flex-direction: row; width: 95%; max-width: 1600px; margin: 0 auto; justify-content: space-between; align-items: center; height: 90px; }
 #main .top a{color: #fff;}
-#main .toplogo img{width: 248px; height: 45px; vertical-align: middle;}
+#main .toplogo img{width: 248px; height: 45px; vertical-align: middle; position: relative; z-index: 999;}
 #main .top .gnb{display: flex; flex-direction: row; width: 768px; justify-content: space-between; padding: 0 80px 0;}
 #main .top .gnb>li>a{font-size: 24px; display: inline-block;}
 #main .top .gnb>li>a.on{color: #3873AB;}
@@ -39,11 +39,12 @@ p{color: #3873AB; letter-spacing: -0.5px; font-family: 'Pretendard Variable';}
 #main .top .right .src a{display: block; width: 50px; height: 50px;}
 #main .top .right .src a img{width: 100%; height: 100%; object-fit: cover;}
 
-#main .input{text-align: center; margin-top: 300px;}
+#main .input{width: 95%; max-width: 1600px;text-align: center; padding-top: 300px; margin: 0 auto;}
 #main .input h1{font-family:'Pretendard-Variable'; font-weight: 500; font-size: 32px; color: #fff; text-shadow: 0 0 6px #333; margin-bottom: 20px;}
+#main .input h1 br{display: none;}
 #main .input input{width: 400px; height: 55px; border: none; border-radius: 50px; color: #797979; font-family: 'SUITE-Variable'; text-align: center; font-size: 22px; box-shadow: inset 0 0 15px #ddd;}
 
-#main .resv{display: flex; width: 1200px; margin: 0 auto; margin-top: 150px;}
+#main .resv{display: flex; width: 95%; max-width: 1200px; margin: 0 auto; margin-top: 150px;}
 #main .resv li{text-align: center; flex: 1 1 30%; display: flex; flex-direction: column;}
 #main .resv li a:nth-child(2){color: #fff; font-size: 55px;text-shadow: 0 0 6px #333;}
 
@@ -65,7 +66,7 @@ p{color: #3873AB; letter-spacing: -0.5px; font-family: 'Pretendard Variable';}
 
 
 
-#second{width: 100%; height: 100vh;}
+#second{width: 100%; height: 100vh; padding-bottom: 50px;}
 #second .secondwrap{width: 100%; max-width: 1600px; margin: 0 auto;}
 #second .sqwrap{width: 100%; display: flex; flex-direction: row; justify-content: left; padding-top: 100px; column-gap: 50px;}
 #second .slide{width: 50%;}
@@ -127,8 +128,33 @@ p{color: #3873AB; letter-spacing: -0.5px; font-family: 'Pretendard Variable';}
 #third .right .contents li .category{font-size: 18px; color: #797979; text-align: left; padding: 10px 0 5px 10px;}
 #third .right .contents li .title{font-size: 20px; color: #000;text-align: left; padding-left: 10px;}
 
-
 #fourth{width: 100%; height: 100vh;}
+
+#main .top .hdmenu{z-index: 9; display: none;}
+#main .top .hdmenu .menu{width: 60px; height: 60px; }
+#main .top .hdmenu .close{display: none; width: 60px; height: 60px; transition: 1s;}
+#main .top .hdmenu .close.on{transform: rotate(360deg);}
+#main .top .hdmenu img{object-fit: contain; width: 100%; height: 100%; }
+
+#main .topwrap .hdgnbwrap{width: 100%;height: 100vh; display: none; position: absolute; left: 0; top: 0;}
+#main .topwrap .hdgnb{width: 100%;height: 100%;background-color: #fff; display: flex;flex-direction: row; padding: 90px 50px 0 50px;}
+#main .topwrap .hdgnb>li{flex: 0 0 50%;}
+#main .topwrap .hdgnb>li>ul{width: 100%;}
+#main .topwrap .hdgnb>li>ul>li{display: flex; flex-direction: column;}
+#main .topwrap .hdgnb .number p{font-size: 28px;}
+#main .topwrap .hdgnb .number h2{font-size: 50px;}
+#main .topwrap .hdgnb>li>ul>li>a{font-size: 70px; display: inline-block; position: relative; z-index: 999; line-height: 100px;}
+#main .topwrap .hdgnb>li>ul>li>a::before{content: url(../images/down.svg); position: absolute; left: 250px; top: 62%; transform: translateY(-50%); width: 100%; height: 100%;}
+#main .topwrap .hdgnb>li>ul>li>a:hover::before{content: url(../images/down_on.svg); }
+#main .topwrap .hdgnb>li>ul>li .submenu{display: none;}
+#main .topwrap .hdgnb>li>ul>li .submenu>li{width: 50%;}
+#main .topwrap .hdgnb>li>ul>li .submenu a{color: #797979; line-height: 30px;}
+#main .topwrap .hdgnb>li>ul>li .submenu a:hover{font-weight: bold;}
+#main .topwrap .hdgnb>li>ul>li .submenu>li>a{font-size: 20px; color: #000;}
+#main .topwrap .hdgnb>li>ul>li .submenu .sublist{font-size: 18px; color: #797979;}
+#main .topwrap .hdgnb>li>ul>li .submenu .sublist a:hover{color: #3873AB;}
+#main .hdgnb a{color: #3873AB;}
+#main .hdgnb p{color: #797979;}
 
 @media screen and (max-width: 1600px){
 	#main .topwrap{width: 100%; margin: 0 auto;}
@@ -144,9 +170,55 @@ p{color: #3873AB; letter-spacing: -0.5px; font-family: 'Pretendard Variable';}
 	#third .thirdwrap{width: 95%; max-width: 1280px;}
 	#third .right .contents li{margin: 5px; transform:scale(0.9);}
 	#third .right .contents li:nth-child(odd){transform: scale(0.9) translateY(100px);}
-};
+}
 
 @media screen and (max-width: 1280px){
+	#main .top .hdmenu{display: block;}
+	#main .top{width: 95%; max-width: 992px;}
+	#main .top .gnb{display: none;}
+	#main .top .right{display: none;}
+	#main .resv li a:nth-child(2){font-size: 40px; margin-top: 15px;}
+	#second{height: auto;}
+	#second .secondwrap{width: 95%; height: 1300px;max-width: 992px; box-sizing: content-box; padding-bottom: 100px;}
+	#second .secondwrap .sqwrap{flex-direction: column;}
+	#second .secondwrap .sqwrap .slide{width: 100%;;}
+	#second .secondwrap .quick{display: flex; flex-direction: column; padding-top: 20px;}
+	#second .secondwrap .quicksrc{display: flex; flex-direction: row; justify-content: center; gap: 20px; align-items: center;}
+	#second .secondwrap .quicksrc h2{padding: 0;}
+	#second .secondwrap .quicksrc input{width: 50%;}
+	#second .notice .noticelist li{width: 90%;}
+	#second .notice .noticelist li:nth-child(2){display: none;}
+	#second .notice .noticelist li .title{font-size: 30px;}
+	#third .thirdwrap{width: 95%; max-width: 992px;}
+	#third .thirdwrap .left{left: 10%; top:18%; transform: scale(0.9); text-align: center;}
+	#third .right .contents{flex-direction: column;transform: none; align-items: center;}
+	#third .right .contents li{margin: 20px;transform: scale(1);}
+	#third .right .contents li:nth-child(odd){transform: scale(1) translateY(0);}
 
-	#main .resv li a:nth-child(2){font-size: 40px;}
-}
+	@media screen and (max-width: 992px){
+		#main .top{width: 95%; max-width: 768px;}
+		#second .secondwrap{width: 95%; max-width: 768px; padding-bottom: 70px;}
+		#second .secondwrap .quick{padding: 40px 0 50px;}
+		#second .secondwrap .quicksrc{flex-direction: column;}
+		#second .secondwrap .quicksrc input{width: 80%;}
+		#third .thirdwrap{width: 95%; max-width: 768px; flex-direction: column;}
+		#third .thirdwrap .left{position: relative; left: 0; top: 0;}
+		#third .thirdwrap .left h1{margin-bottom: 40px;}
+		#third .right .contents{flex-direction:row; flex-wrap: wrap; justify-content: center;}
+	}
+
+	@media screen and (max-width: 768px){
+		#main .input h1 br{display: block;}
+		#main .resv li a:nth-child(2){font-size: 28px;}
+		#main .topwrap .hdgnb .number p{font-size: 18px;}
+		#main .topwrap .hdgnb .number h2{font-size: 28px;}
+	#main .topwrap .hdgnb>li>ul>li>a{font-size: 36px; line-height: 70px;}
+	#main .topwrap .hdgnb>li>ul>li>a::before{left: 120px; top: 0; width: 10%; height: 10%;}
+	#second .quick .quickmenu{width: 90%; height: 450px; display: flex; flex-direction: row; flex-wrap: wrap; margin: 0 auto; justify-content: center; padding-top: 40px; padding-bottom: 0;}
+#second .quick .quickmenu>li{flex: 0 0 40%; height: 100px;}
+#second .quick .quickmenu>li p:first-child{height: 80px; }
+#second .quick .quickmenu>li p:nth-child(2){line-height: 30px; font-size: 18px; color: #000;}
+#second .notice h1{padding-top: 0;}
+#third{padding-top: 100px;}
+	}
+
