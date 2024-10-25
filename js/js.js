@@ -1,5 +1,8 @@
 $(function(){
 
+
+AOS.init({});
+
 $(".gnb>li").mouseenter(function(){
   $(".gnb>li>a").addClass("on");
   $(".topwrap").addClass("on");
@@ -11,6 +14,7 @@ $(".gnb>li").mouseenter(function(){
   $(".src>a>img").attr("src", "images/icon_search_on.png");
 });
 
+
 $(".top").mouseleave(function(){
   $(".gnb>li>a").removeClass("on");
   $(".topwrap").removeClass("on");
@@ -20,6 +24,45 @@ $(".top").mouseleave(function(){
   $(".right .login a").removeClass("on");
   $(".src>a>img").attr("src", "images/icon_search_white.png");
 });
+
+$(".resv li").mouseenter(function(){
+  let i = $(this).index()+1;
+  console.log(i);
+  $(this).eq(i).attr("src", "images/main_icon_0"+i+"_on.svg");
+});
+
+function my(){
+  $(".top").mouseleave(function(){
+    $(".gnb>li>a").addClass("on");
+    $(".topwrap").addClass("on");
+    $(".toplogo>img").attr("src", "images/logo_on.png");
+    $(".right .login a").addClass("on");
+    $(".src>a>img").attr("src", "images/icon_search_on.png");
+  });
+  
+}
+$(window).scroll(function(){
+  
+if($(this).scrollTop() > 70){
+    $(".gnb>li>a").addClass("on");
+    $(".topwrap").addClass("on");
+    $(".toplogo>img").attr("src", "images/logo_on.png");
+    $(".right .login a").addClass("on");
+    $(".src>a>img").attr("src", "images/icon_search_on.png");
+    my();
+    $(".hdmenu .menu img").attr("src","images/menu_on.svg");
+  $(".topwrap").addClass(on);
+  }
+  else{
+    $(".gnb>li>a").removeClass("on");
+    $(".topwrap").removeClass("on");
+    $(".toplogo>img").attr("src", "images/logo_white.png");
+    $(".right .login a").removeClass("on");
+    $(".src>a>img").attr("src", "images/icon_search_white.png");  
+    $(".hdmenu .menu img").attr("src","images/menu.svg");
+    $(".topwrap").removeClass(on);
+    my().hide();
+  }
 });
 
 var swiper = new Swiper(".mySwiper", {
@@ -39,18 +82,23 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 $(".hdmenu .menu").click(function(){
-  $(".menu").hide();
-  $(".close").show();
   $(".hdgnbwrap").show();
+  $(".section").hide();
+  $(".foot").hide();
+  $(".close").show();
+  $(".topwrap").show();
   $(".topwrap").addClass("on");
-  $(".toplogo>img").attr("src", "images/logo_on.png")});
+  $(".toplogo>img").attr("src", "images/logo_on.png");
+
+});
 
 $(".hdmenu .close").click(function(){
-  $(".menu").show();
   $(".close").hide();
   $(".hdgnbwrap").hide();
   $(".topwrap").removeClass("on");
   $(".toplogo>img").attr("src", "images/logo_white.png");
+  $(".section").show();
+  $(".foot").show();
 });
 
 $(".close").hover(function(){
@@ -60,7 +108,7 @@ $(".close").hover(function(){
 $(".hdgnb .right>ul>li").click(function(){
   $(this).find(".submenu").toggle();
 
+
 });
 
-
-
+});
